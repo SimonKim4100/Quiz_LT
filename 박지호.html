@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 13) {
+                        answerValue = selectedOption.value === 'option1' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 14) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 15) {
+                        answerValue = selectedOption.value === 'option1' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>우리 집에는 반려동물이자 막내인 고양이를 기르고 있는데 고양이 이름은?</h2>
             <label>
-                <input type="radio" name="question13" value="option1"> Option 1
+                <input type="radio" name="question13" value="option1"> 토토
             </label><br>
             <label>
-                <input type="radio" name="question13" value="option2"> Option 2
+                <input type="radio" name="question13" value="option2"> 구찌
             </label><br>
             <label>
-                <input type="radio" name="question13" value="option3"> Option 3
+                <input type="radio" name="question13" value="option3"> 군밤
             </label><br>
             <label>
-                <input type="radio" name="question13" value="option4"> Option 4
+                <input type="radio" name="question13" value="option4"> 밤이
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>호불호 음식 중 싫어하는 음식은?</h2>
             <label>
-                <input type="radio" name="question14" value="option1"> Option 1
+                <input type="radio" name="question14" value="option1"> 두리안
             </label><br>
             <label>
-                <input type="radio" name="question14" value="option2"> Option 2
+                <input type="radio" name="question14" value="option2"> 민초
             </label><br>
             <label>
-                <input type="radio" name="question14" value="option3"> Option 3
+                <input type="radio" name="question14" value="option3"> 홍어
             </label><br>
             <label>
-                <input type="radio" name="question14" value="option4"> Option 4
+                <input type="radio" name="question14" value="option4"> 없음
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>MBTI는 ENFP인데 이 중 가장 높은 수치(알파벳은?)</h2>
             <label>
-                <input type="radio" name="question15" value="option1"> Option 1
+                <input type="radio" name="question15" value="option1"> E
             </label><br>
             <label>
-                <input type="radio" name="question15" value="option2"> Option 2
+                <input type="radio" name="question15" value="option2"> N
             </label><br>
             <label>
-                <input type="radio" name="question15" value="option3"> Option 3
+                <input type="radio" name="question15" value="option3"> F
             </label><br>
             <label>
-                <input type="radio" name="question15" value="option4"> Option 4
+                <input type="radio" name="question15" value="option4"> P
             </label>
         </div>
     </div>

@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 37) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 38) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 39) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>나의 MBTI는?</h2>
             <label>
-                <input type="radio" name="question37" value="option1"> Option 1
+                <input type="radio" name="question37" value="option1"> ISFJ
             </label><br>
             <label>
-                <input type="radio" name="question37" value="option2"> Option 2
+                <input type="radio" name="question37" value="option2"> ISFP
             </label><br>
             <label>
-                <input type="radio" name="question37" value="option3"> Option 3
+                <input type="radio" name="question37" value="option3"> INFJ
             </label><br>
             <label>
-                <input type="radio" name="question37" value="option4"> Option 4
+                <input type="radio" name="question37" value="option4"> INFP
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>다음 중 가 본 적 있는 나라는?</h2>
             <label>
-                <input type="radio" name="question38" value="option1"> Option 1
+                <input type="radio" name="question38" value="option1"> 태국
             </label><br>
             <label>
-                <input type="radio" name="question38" value="option2"> Option 2
+                <input type="radio" name="question38" value="option2"> 대만
             </label><br>
             <label>
-                <input type="radio" name="question38" value="option3"> Option 3
+                <input type="radio" name="question38" value="option3"> 네팔
             </label><br>
             <label>
-                <input type="radio" name="question38" value="option4"> Option 4
+                <input type="radio" name="question38" value="option4"> 인도
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>다음 중 못 먹는 버섯은?</h2>
             <label>
-                <input type="radio" name="question39" value="option1"> Option 1
+                <input type="radio" name="question39" value="option1"> 느타리버섯
             </label><br>
             <label>
-                <input type="radio" name="question39" value="option2"> Option 2
+                <input type="radio" name="question39" value="option2"> 새송이버섯
             </label><br>
             <label>
-                <input type="radio" name="question39" value="option3"> Option 3
+                <input type="radio" name="question39" value="option3"> 팽이버섯
             </label><br>
             <label>
-                <input type="radio" name="question39" value="option4"> Option 4
+                <input type="radio" name="question39" value="option4"> 목이버섯
             </label>
         </div>
     </div>

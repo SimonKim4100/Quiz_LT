@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 10) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 11) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 12) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>요즘 제일 좋아하는 음식? </h2>
             <label>
-                <input type="radio" name="question10" value="option1"> Option 1
+                <input type="radio" name="question10" value="option1"> 치킨
             </label><br>
             <label>
-                <input type="radio" name="question10" value="option2"> Option 2
+                <input type="radio" name="question10" value="option2"> 떡볶이
             </label><br>
             <label>
-                <input type="radio" name="question10" value="option3"> Option 3
+                <input type="radio" name="question10" value="option3"> 김치볶음밥
             </label><br>
             <label>
-                <input type="radio" name="question10" value="option4"> Option 4
+                <input type="radio" name="question10" value="option4"> 김치찌개
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>요즘 제일 좋아하는 찬양?</h2>
             <label>
-                <input type="radio" name="question11" value="option1"> Option 1
+                <input type="radio" name="question11" value="option1"> Celebrate the Light/제이어스
             </label><br>
             <label>
-                <input type="radio" name="question11" value="option2"> Option 2
+                <input type="radio" name="question11" value="option2"> 하나님의 열심/러빔
             </label><br>
             <label>
-                <input type="radio" name="question11" value="option3"> Option 3
+                <input type="radio" name="question11" value="option3"> 우린 물러서지 않으리/WELOVE
             </label><br>
             <label>
-                <input type="radio" name="question11" value="option4"> Option 4
+                <input type="radio" name="question11" value="option4"> 주를 더욱 사랑/팀룩워십
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>제일 좋아하는 계절?</h2>
             <label>
-                <input type="radio" name="question12" value="option1"> Option 1
+                <input type="radio" name="question12" value="option1"> 봄
             </label><br>
             <label>
-                <input type="radio" name="question12" value="option2"> Option 2
+                <input type="radio" name="question12" value="option2"> 여름
             </label><br>
             <label>
-                <input type="radio" name="question12" value="option3"> Option 3
+                <input type="radio" name="question12" value="option3"> 가을
             </label><br>
             <label>
-                <input type="radio" name="question12" value="option4"> Option 4
+                <input type="radio" name="question12" value="option4"> 겨울
             </label>
         </div>
     </div>

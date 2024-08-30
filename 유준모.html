@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 16) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 17) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 18) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>Q1. 저는 교회를 다닌지 얼마나 되었을까요?</h2>
             <label>
-                <input type="radio" name="question16" value="option1"> Option 1
+                <input type="radio" name="question16" value="option1"> 1-3년
             </label><br>
             <label>
-                <input type="radio" name="question16" value="option2"> Option 2
+                <input type="radio" name="question16" value="option2"> 3-5년
             </label><br>
             <label>
-                <input type="radio" name="question16" value="option3"> Option 3
+                <input type="radio" name="question16" value="option3"> 5-10년
             </label><br>
             <label>
-                <input type="radio" name="question16" value="option4"> Option 4
+                <input type="radio" name="question16" value="option4"> 모태신앙
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>제가 2번째로 좋아하는 음악 장르는?</h2>
             <label>
-                <input type="radio" name="question17" value="option1"> Option 1
+                <input type="radio" name="question17" value="option1"> 힙합
             </label><br>
             <label>
-                <input type="radio" name="question17" value="option2"> Option 2
+                <input type="radio" name="question17" value="option2"> EDM
             </label><br>
             <label>
-                <input type="radio" name="question17" value="option3"> Option 3
+                <input type="radio" name="question17" value="option3"> 재즈
             </label><br>
             <label>
-                <input type="radio" name="question17" value="option4"> Option 4
+                <input type="radio" name="question17" value="option4"> CCM
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>저의 이상형인 연예인은 누구일까요?</h2>
             <label>
-                <input type="radio" name="question18" value="option1"> Option 1
+                <input type="radio" name="question18" value="option1"> 에스파 카리나
             </label><br>
             <label>
-                <input type="radio" name="question18" value="option2"> Option 2
+                <input type="radio" name="question18" value="option2"> 고윤정
             </label><br>
             <label>
-                <input type="radio" name="question18" value="option3"> Option 3
+                <input type="radio" name="question18" value="option3"> 신예은
             </label><br>
             <label>
-                <input type="radio" name="question18" value="option4"> Option 4
+                <input type="radio" name="question18" value="option4"> 소녀시대 윤아
             </label>
         </div>
     </div>

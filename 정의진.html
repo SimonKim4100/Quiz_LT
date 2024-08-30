@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 31) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 32) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 33) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>대학시절 전공과 지금 하고 있는 일을 바르게 짝지은 것은?</h2>
             <label>
-                <input type="radio" name="question31" value="option1"> Option 1
+                <input type="radio" name="question31" value="option1"> 광고홍보학과 - 화장품 회사
             </label><br>
             <label>
-                <input type="radio" name="question31" value="option2"> Option 2
+                <input type="radio" name="question31" value="option2"> 전자공학과 - 마케팅
             </label><br>
             <label>
-                <input type="radio" name="question31" value="option3"> Option 3
+                <input type="radio" name="question31" value="option3"> 산업디자인학과 - 마케팅
             </label><br>
             <label>
-                <input type="radio" name="question31" value="option4"> Option 4
+                <input type="radio" name="question31" value="option4"> 화학과 - 화장품 회사
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>정의진의 집은 몇층일까요?</h2>
             <label>
-                <input type="radio" name="question32" value="option1"> Option 1
+                <input type="radio" name="question32" value="option1"> 1층
             </label><br>
             <label>
-                <input type="radio" name="question32" value="option2"> Option 2
+                <input type="radio" name="question32" value="option2"> 9층
             </label><br>
             <label>
-                <input type="radio" name="question32" value="option3"> Option 3
+                <input type="radio" name="question32" value="option3"> 17층
             </label><br>
             <label>
-                <input type="radio" name="question32" value="option4"> Option 4
+                <input type="radio" name="question32" value="option4"> 4층
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>정의진이 살지 않았던 동네는?</h2>
             <label>
-                <input type="radio" name="question33" value="option1"> Option 1
+                <input type="radio" name="question33" value="option1"> 구반포역
             </label><br>
             <label>
-                <input type="radio" name="question33" value="option2"> Option 2
+                <input type="radio" name="question33" value="option2"> 교대역
             </label><br>
             <label>
-                <input type="radio" name="question33" value="option3"> Option 3
+                <input type="radio" name="question33" value="option3"> 언주역
             </label><br>
             <label>
-                <input type="radio" name="question33" value="option4"> Option 4
+                <input type="radio" name="question33" value="option4"> 부산
             </label>
         </div>
     </div>

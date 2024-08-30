@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 25) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 26) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 27) {
+                        answerValue = selectedOption.value === 'option1' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>내가 싫어하는 음식은?</h2>
             <label>
-                <input type="radio" name="question25" value="option1"> Option 1
+                <input type="radio" name="question25" value="option1"> 단호박튀김
             </label><br>
             <label>
-                <input type="radio" name="question25" value="option2"> Option 2
+                <input type="radio" name="question25" value="option2"> 크림스프
             </label><br>
             <label>
-                <input type="radio" name="question25" value="option3"> Option 3
+                <input type="radio" name="question25" value="option3"> 쌀국수
             </label><br>
             <label>
-                <input type="radio" name="question25" value="option4"> Option 4
+                <input type="radio" name="question25" value="option4"> 전복죽
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>나의 전공은?</h2>
             <label>
-                <input type="radio" name="question26" value="option1"> Option 1
+                <input type="radio" name="question26" value="option1"> 시각디자인과
             </label><br>
             <label>
-                <input type="radio" name="question26" value="option2"> Option 2
+                <input type="radio" name="question26" value="option2"> 회화과
             </label><br>
             <label>
-                <input type="radio" name="question26" value="option3"> Option 3
+                <input type="radio" name="question26" value="option3"> 영상학과
             </label><br>
             <label>
-                <input type="radio" name="question26" value="option4"> Option 4
+                <input type="radio" name="question26" value="option4"> 조소과
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>내가 최근에 자주 듣는 찬양은?</h2>
             <label>
-                <input type="radio" name="question27" value="option1"> Option 1
+                <input type="radio" name="question27" value="option1"> 아름다운 나라
             </label><br>
             <label>
-                <input type="radio" name="question27" value="option2"> Option 2
+                <input type="radio" name="question27" value="option2"> 성령의 바람
             </label><br>
             <label>
-                <input type="radio" name="question27" value="option3"> Option 3
+                <input type="radio" name="question27" value="option3"> 오늘을 살자
             </label><br>
             <label>
-                <input type="radio" name="question27" value="option4"> Option 4
+                <input type="radio" name="question27" value="option4"> 모든 생명들아 소리쳐
             </label>
         </div>
     </div>

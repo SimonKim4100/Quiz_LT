@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Quiz App - Enter Your Name</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        import { getFirestore, collection, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBDj4ezKxJzZr2LacZhQbSy9oalLfuhCsY",
+            authDomain: "welcomelt.firebaseapp.com",
+            databaseURL: "https://welcomelt-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "welcomelt",
+            storageBucket: "welcomelt.appspot.com",
+            messagingSenderId: "444254240122",
+            appId: "1:444254240122:web:d9ebb4a7d87e8dad38eac3",
+            measurementId: "G-8E2Z7E8ZXT"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Initialize Firestore
+        const db = getFirestore(app);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the user is already logged in by checking localStorage
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+            if (isLoggedIn) {
+                // User is logged in, show the scrollable list
+                document.getElementById('name-form').style.display = 'none';
+                document.getElementById('scrollable-list').style.display = 'block';
+                document.getElementById('reset-button').style.display = 'block'; // Show reset button
+            } else {
+                // User is not logged in, show the form
+                document.getElementById('name-form').style.display = 'block';
+                document.getElementById('scrollable-list').style.display = 'none';
+                document.getElementById('reset-button').style.display = 'none'; // Hide reset button
+            }
+
+            // Add submit event listener for the name form
+            document.getElementById('name-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form from submitting the traditional way
+
+                // Get the user's name from the input field
+                const userName = document.getElementById('username').value.trim().normalize();
+
+                // Check if the document with the user's name as ID exists
+                verifyUserName(userName).then(exists => {
+                    if (exists) {
+                        // Hide the form elements upon successful verification
+                        document.getElementById('name-form').style.display = 'none';
+                        // Show the scrollable list if the document exists
+                        document.getElementById('scrollable-list').style.display = 'block';
+                        // Show reset button
+                        document.getElementById('reset-button').style.display = 'block'; 
+                        // Save the logged-in state to localStorage
+                        localStorage.setItem('isLoggedIn', 'true');
+                        localStorage.setItem('userNameLT', userName)
+                    } else {
+                        alert('Name not found.');
+                    }
+                });
+            });
+
+            // Add event listeners to each button after the DOM has fully loaded
+            const buttons = document.querySelectorAll('.name-box');
+            
+            // Attach click event listeners to each button
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const name = this.textContent; // Get the name from the button's text content
+                    navigateToPage(name); // Call the navigate function
+                });
+            });
+            document.getElementById('reset-button').addEventListener('click', function() {
+                // Clear local storage
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('userNameLT');
+                // Optionally, you can refresh the page
+                location.reload();
+            });
+        });
+
+    // Add event listener for the reset button
+
+
+        // Function to verify if a document with the user's name as ID exists
+        async function verifyUserName(name) {
+            try {
+                // Reference the document with the user's name as ID directly under "users" collection
+                const userDocRef = doc(db, "users", name);
+
+                // Fetch the document
+                const userDoc = await getDoc(userDocRef);
+
+                // Check if the document exists
+                return userDoc.exists(); // Returns true if document exists, false otherwise
+            } catch (error) {
+                console.error("Error checking user name in Firestore: ", error);
+                return false;
+            }
+        }
+
+        // Function to navigate to a new HTML page
+        function navigateToPage(name) {
+            window.location.href = name + '.html'; // Navigate to the corresponding HTML file
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Container for centering content -->
+    <div class="center-container">
+        <!-- Reset button -->
+        <button id="reset-button" class="reset-button">초기화</button>
+        <!-- Form for user input -->
+        <form id="name-form">
+            <input type="text" id="username" name="username" placeholder="당신의 이름은?" required>
+            <button type="submit">드가자~</button>
+        </form>
+
+        <!-- Scrollable list of names, initially hidden -->
+        <div id="scrollable-list" class="scrollable-list" style="display: none;">
+            <!-- Each name inside a button -->
+            <button class="name-box">강두한</button>
+            <button class="name-box">김승범</button>
+            <button class="name-box">김호연</button>
+            <button class="name-box">박유진</button>
+            <button class="name-box">박지호</button>
+            <button class="name-box">유준모</button>
+            <button class="name-box">이신형</button>
+            <button class="name-box">이의호</button>
+            <button class="name-box">임다빈</button>
+            <button class="name-box">정서진</button>
+            <button class="name-box">정의진</button>
+            <button class="name-box">조진우</button>
+            <button class="name-box">최서연</button>
+            <button class="name-box">홍다솜</button>
+        </div>
+    </div>
+</body>
+</html>

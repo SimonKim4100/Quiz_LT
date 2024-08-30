@@ -86,10 +86,18 @@ button:hover {
 #scrollable-list {
     width: 60vw; /* Full width with padding consideration */
     max-width: 600px; /* Optional: Set max width for larger screens */
-    overflow-y: auto;
+    overflow-y: scroll; /* Allow vertical scrolling */
     max-height: 70vh; /* Restrict height to avoid overflow */
     padding: 2vw;
     margin-top: 0vh;
+
+    /* Hide scrollbar in all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+}
+
+#scrollable-list::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
 }
 
 /* Styling for the name boxes */

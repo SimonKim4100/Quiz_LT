@@ -1,0 +1,83 @@
+/* Basic styling for quiz page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background */
+    position: relative; /* Position relative to contain absolute positioned elements */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container for quiz questions */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh; /* Space between question boxes */
+    padding: 5vw; /* Padding around quiz container */
+    margin-top: 3vh; /* Space below the return button */
+    width: 90vw; /* Full width of the container */
+    overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+/* Question box styling */
+.question-box {
+    background-color: white; /* White background for question box */
+    padding: 5vw;
+    border-radius: 4vh; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Header styling inside question boxes */
+.question-box h2 {
+    margin-top: 0; /* Remove top margin to reduce space above the header */
+    margin-bottom: 2vh; /* Adjust bottom margin as needed */
+}
+
+h2 {
+    margin-bottom: 2vh; /* Space below question title */
+}
+
+label {
+    display: block; /* Each option on a new line */
+    margin: 0vh 0; /* Space between options */
+}
+
+/* Return button styling */
+.return-button {
+    position: relative;
+    top: 3vh;
+    left: 5vw;
+    padding: 3vw 3vh;
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+/* Return button hover effect */
+.return-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Submit button styling */
+.submit-button {
+    position: relative;
+    float: right;
+    top: 0vh;
+    right: 5vw;
+    margin-bottom: 3vh;
+    padding: 3vw 3vh;
+    background-color: #28a745; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}

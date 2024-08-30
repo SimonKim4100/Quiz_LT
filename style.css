@@ -1,0 +1,125 @@
+/* Reset default browser padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and borders in element's width and height */
+}
+
+/* Basic styling for all devices */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Light background color */
+    overflow: hidden; /* Prevent any scrolling */
+}
+
+/* Container to center content vertically and horizontally */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    max-width: 100vw; /* Prevents exceeding viewport width */
+    padding: 2vh; /* Responsive padding */
+    box-sizing: border-box; /* Include padding in width */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Styling for the input text box */
+#username {
+    width: 80%; /* Responsive width to fit inside container */
+    padding: 1vh; /* Responsive padding */
+    margin-bottom: 1vh; /* Space between input and button */
+    border: 1px solid #b1b1b1; /* Light border */
+    background-color: #ececec;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 2vh; /* Responsive font size */
+    text-align: center;
+}
+
+#username::placeholder {
+    text-align: center; /* Center-align the placeholder text */
+    color: #999; /* Optional: Change the color of the placeholder text */
+}
+
+/* Updated Styling for the form container */
+#name-form {
+    width: 100%; /* Full width of the container */
+    max-width: 500px; /* Limit width for better centering */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    justify-content: center; /* Center-align children vertically */
+    gap: 1vh; /* Add vertical spacing between input and button */
+    text-align: center; /* Ensure text inside form is centered */
+}
+
+
+/* Updated Styling for the submit button */
+button {
+    width: 50%; /* Make button width similar to input for alignment */
+    max-width: 200px; /* Maximum width for the button */
+    padding: 1vh; /* Responsive padding */
+    background-color: #8d1e91; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 2vh; /* Responsive font size */
+    cursor: pointer; /* Pointer cursor */
+    text-align: center; /* Center text inside button */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #003670; /* Darker blue on hover */
+}
+
+/* Scrollable list of names, responsive */
+#scrollable-list {
+    width: 60vw; /* Full width with padding consideration */
+    max-width: 600px; /* Optional: Set max width for larger screens */
+    overflow-y: auto;
+    max-height: 70vh; /* Restrict height to avoid overflow */
+    padding: 2vw;
+    margin-top: 0vh;
+}
+
+/* Styling for the name boxes */
+.name-box {
+    width: 100%; /* Full width of the scrollable area */
+    padding: 2vh; /* Height approximately three times the text height */
+    margin: 1vh 0;
+    background-color: #2a74db; /* Light gray background */
+    text-align: center;
+    font-size: 2vh; /* Responsive font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Styling for the reset button */
+.reset-button {
+    position: absolute; /* Position it relative to the viewport */
+    width: 30vw;
+    top: 2vh; /* Distance from the top */
+    left: 4vw; /* Distance from the left */
+    background-color: #808080; /* Background color for the button */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 3vh; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Hover effect for reset button */
+.reset-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}

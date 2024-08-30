@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 34) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 35) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 36) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -102,6 +109,7 @@
             window.location.href = 'index.html';
         }
 
+
     </script>
 </head>
 <body>
@@ -113,52 +121,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>내가 가장 최근에 한 운동은?</h2>
             <label>
-                <input type="radio" name="question34" value="option1"> Option 1
+                <input type="radio" name="question34" value="option1"> 런닝
             </label><br>
             <label>
-                <input type="radio" name="question34" value="option2"> Option 2
+                <input type="radio" name="question34" value="option2"> 클라이밍
             </label><br>
             <label>
-                <input type="radio" name="question34" value="option3"> Option 3
+                <input type="radio" name="question34" value="option3"> 탁구
             </label><br>
             <label>
-                <input type="radio" name="question34" value="option4"> Option 4
+                <input type="radio" name="question34" value="option4"> 헬스
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>내가 최근 아침마다 순수하게 기도한 시간은?</h2>
             <label>
-                <input type="radio" name="question35" value="option1"> Option 1
+                <input type="radio" name="question35" value="option1"> 30분
             </label><br>
             <label>
-                <input type="radio" name="question35" value="option2"> Option 2
+                <input type="radio" name="question35" value="option2"> 40분
             </label><br>
             <label>
-                <input type="radio" name="question35" value="option3"> Option 3
+                <input type="radio" name="question35" value="option3"> 50분
             </label><br>
             <label>
-                <input type="radio" name="question35" value="option4"> Option 4
+                <input type="radio" name="question35" value="option4"> 60분
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>나는 리더의 자리로 이렇게 여러분들을 만나 뵙게 되어 기쁘고 감사하다.</h2>
             <label>
-                <input type="radio" name="question36" value="option1"> Option 1
+                <input type="radio" name="question36" value="option1"> 그렇다.
             </label><br>
             <label>
-                <input type="radio" name="question36" value="option2"> Option 2
+                <input type="radio" name="question36" value="option2"> 조금 그렇다.
             </label><br>
             <label>
-                <input type="radio" name="question36" value="option3"> Option 3
+                <input type="radio" name="question36" value="option3"> 정말 매우 그렇다.
             </label><br>
             <label>
-                <input type="radio" name="question36" value="option4"> Option 4
+                <input type="radio" name="question36" value="option4"> 한치의 의심도 없이 확고하며, 그 어느 때보다도 강력하게 그렇다.
             </label>
         </div>
     </div>

@@ -54,13 +54,20 @@
             console.log("User is logged in as:", loggedInUserName);
 
             // Loop through each question to record the user's answer (0 or 1)
-            for (let i = 4; i <= 7; i++) { // Assuming there are 3 questions
+            for (let i = 4; i <= 6; i++) { // Assuming there are 3 questions
                 const selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
                 console.log(`Checking question ${i}...`);
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 4) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 5) {
+                        answerValue = selectedOption.value === 'option1' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 6) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,35 +120,35 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>이 중에 제가 안해본 스포츠는?</h2>
             <label>
-                <input type="radio" name="question4" value="option1"> Option 1
+                <input type="radio" name="question4" value="option1"> 피겨스케이팅
             </label><br>
             <label>
-                <input type="radio" name="question4" value="option2"> Option 2
+                <input type="radio" name="question4" value="option2"> 유도
             </label><br>
             <label>
-                <input type="radio" name="question4" value="option3"> Option 3
+                <input type="radio" name="question4" value="option3"> 테니스
             </label><br>
             <label>
-                <input type="radio" name="question4" value="option4"> Option 4
+                <input type="radio" name="question4" value="option4"> 서핑
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>영화를 정말 많이 보는데, 이중에 가장 좋아하는 영화 장르는?</h2>
             <label>
-                <input type="radio" name="question5" value="option1"> Option 1
+                <input type="radio" name="question5" value="option1"> 로맨스
             </label><br>
             <label>
-                <input type="radio" name="question5" value="option2"> Option 2
+                <input type="radio" name="question5" value="option2"> 액션
             </label><br>
             <label>
-                <input type="radio" name="question5" value="option3"> Option 3
+                <input type="radio" name="question5" value="option3"> SF
             </label><br>
             <label>
-                <input type="radio" name="question5" value="option4"> Option 4
+                <input type="radio" name="question5" value="option4"> 코미디
             </label>
         </div>
 
@@ -149,16 +156,16 @@
         <div class="question-box">
             <h2>Question 3</h2>
             <label>
-                <input type="radio" name="question6" value="option1"> Option 1
+                <input type="radio" name="question6" value="option1"> 돈까스
             </label><br>
             <label>
-                <input type="radio" name="question6" value="option2"> Option 2
+                <input type="radio" name="question6" value="option2"> 타코
             </label><br>
             <label>
-                <input type="radio" name="question6" value="option3"> Option 3
+                <input type="radio" name="question6" value="option3"> 햄버거
             </label><br>
             <label>
-                <input type="radio" name="question6" value="option4"> Option 4
+                <input type="radio" name="question6" value="option4"> 국밥
             </label>
         </div>
     </div>

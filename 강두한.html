@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 1) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 2) {
+                        answerValue = selectedOption.value === 'option1' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 3) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>저의 키는 몇일까요?</h2>
             <label>
-                <input type="radio" name="question1" value="option1"> Option 1
+                <input type="radio" name="question1" value="option1"> 183
             </label><br>
             <label>
-                <input type="radio" name="question1" value="option2"> Option 2
+                <input type="radio" name="question1" value="option2"> 185
             </label><br>
             <label>
-                <input type="radio" name="question1" value="option3"> Option 3
+                <input type="radio" name="question1" value="option3"> 187
             </label><br>
             <label>
-                <input type="radio" name="question1" value="option4"> Option 4
+                <input type="radio" name="question1" value="option4"> 189
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>저의 취미가 아닌것은 무엇일까요?</h2>
             <label>
-                <input type="radio" name="question2" value="option1"> Option 1
+                <input type="radio" name="question2" value="option1"> 런닝
             </label><br>
             <label>
-                <input type="radio" name="question2" value="option2"> Option 2
+                <input type="radio" name="question2" value="option2"> 식물 키우기
             </label><br>
             <label>
-                <input type="radio" name="question2" value="option3"> Option 3
+                <input type="radio" name="question2" value="option3"> 웨이트 트레이닝
             </label><br>
             <label>
-                <input type="radio" name="question2" value="option4"> Option 4
+                <input type="radio" name="question2" value="option4"> 유튜브 보기
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>형제자매는 어떻게 될까요?</h2>
             <label>
-                <input type="radio" name="question3" value="option1"> Option 1
+                <input type="radio" name="question3" value="option1"> 외동
             </label><br>
             <label>
-                <input type="radio" name="question3" value="option2"> Option 2
+                <input type="radio" name="question3" value="option2"> 1남 1녀
             </label><br>
             <label>
-                <input type="radio" name="question3" value="option3"> Option 3
+                <input type="radio" name="question3" value="option3"> 2남 1녀
             </label><br>
             <label>
-                <input type="radio" name="question3" value="option4"> Option 4
+                <input type="radio" name="question3" value="option4"> 2녀 1남
             </label>
         </div>
     </div>

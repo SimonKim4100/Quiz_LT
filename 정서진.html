@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 28) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 29) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 30) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>제자훈련 독서 과제 중 제일 기억에 남는 책은?</h2>
             <label>
-                <input type="radio" name="question28" value="option1"> Option 1
+                <input type="radio" name="question28" value="option1"> 특종믿음사건
             </label><br>
             <label>
-                <input type="radio" name="question28" value="option2"> Option 2
+                <input type="radio" name="question28" value="option2"> 그리스도를 본받아
             </label><br>
             <label>
-                <input type="radio" name="question28" value="option3"> Option 3
+                <input type="radio" name="question28" value="option3"> 제자도
             </label><br>
             <label>
-                <input type="radio" name="question28" value="option4"> Option 4
+                <input type="radio" name="question28" value="option4"> 하나님을 경험하는 삶
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>제일 좋아하는 찬양은?</h2>
             <label>
-                <input type="radio" name="question29" value="option1"> Option 1
+                <input type="radio" name="question29" value="option1"> 하나님의 세계
             </label><br>
             <label>
-                <input type="radio" name="question29" value="option2"> Option 2
+                <input type="radio" name="question29" value="option2"> 전능하신 나의 주 하나님은
             </label><br>
             <label>
-                <input type="radio" name="question29" value="option3"> Option 3
+                <input type="radio" name="question29" value="option3"> 예배합니다
             </label><br>
             <label>
-                <input type="radio" name="question29" value="option4"> Option 4
+                <input type="radio" name="question29" value="option4"> 넘쳐나네
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>큐티를 하는 시간은?</h2>
             <label>
-                <input type="radio" name="question30" value="option1"> Option 1
+                <input type="radio" name="question30" value="option1"> 점심
             </label><br>
             <label>
-                <input type="radio" name="question30" value="option2"> Option 2
+                <input type="radio" name="question30" value="option2"> 아침
             </label><br>
             <label>
-                <input type="radio" name="question30" value="option3"> Option 3
+                <input type="radio" name="question30" value="option3"> 새벽
             </label><br>
             <label>
-                <input type="radio" name="question30" value="option4"> Option 4
+                <input type="radio" name="question30" value="option4"> 저녁
             </label>
         </div>
     </div>

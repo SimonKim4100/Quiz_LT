@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 19) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 20) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 21) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>내가 안해본 운동은?</h2>
             <label>
-                <input type="radio" name="question19" value="option1"> Option 1
+                <input type="radio" name="question19" value="option1"> 서핑
             </label><br>
             <label>
-                <input type="radio" name="question19" value="option2"> Option 2
+                <input type="radio" name="question19" value="option2"> 복싱
             </label><br>
             <label>
-                <input type="radio" name="question19" value="option3"> Option 3
+                <input type="radio" name="question19" value="option3"> 유도
             </label><br>
             <label>
-                <input type="radio" name="question19" value="option4"> Option 4
+                <input type="radio" name="question19" value="option4"> 풋살
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>이 중 내가 가장 좋아하는 음식은?</h2>
             <label>
-                <input type="radio" name="question20" value="option1"> Option 1
+                <input type="radio" name="question20" value="option1"> 파스타
             </label><br>
             <label>
-                <input type="radio" name="question20" value="option2"> Option 2
+                <input type="radio" name="question20" value="option2"> 제육
             </label><br>
             <label>
-                <input type="radio" name="question20" value="option3"> Option 3
+                <input type="radio" name="question20" value="option3"> 햄버거
             </label><br>
             <label>
-                <input type="radio" name="question20" value="option4"> Option 4
+                <input type="radio" name="question20" value="option4"> 돈까스
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>이 중 내가 혼자 여행하지 않은 나라는?</h2>
             <label>
-                <input type="radio" name="question21" value="option1"> Option 1
+                <input type="radio" name="question21" value="option1"> 포르투갈
             </label><br>
             <label>
-                <input type="radio" name="question21" value="option2"> Option 2
+                <input type="radio" name="question21" value="option2"> 프랑스
             </label><br>
             <label>
-                <input type="radio" name="question21" value="option3"> Option 3
+                <input type="radio" name="question21" value="option3"> 일본
             </label><br>
             <label>
-                <input type="radio" name="question21" value="option4"> Option 4
+                <input type="radio" name="question21" value="option4"> 호주
             </label>
         </div>
     </div>

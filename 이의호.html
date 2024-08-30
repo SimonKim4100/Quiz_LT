@@ -60,7 +60,14 @@
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
-                    const answerValue = selectedOption.value === 'option1' ? 1 : 0;
+                    let answerValue;
+                    if (i === 22) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 23) {
+                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 24) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 4
+                    }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
                     try {
@@ -113,52 +120,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Question 1</h2>
+            <h2>대학 4부 사람들 중 가장 처음으로 말해본 사람 - 첫 GBS 리더를 바르게 짝지은 것은?</h2>
             <label>
-                <input type="radio" name="question22" value="option1"> Option 1
+                <input type="radio" name="question22" value="option1"> 전은수(전 리더) - 김성원 리더
             </label><br>
             <label>
-                <input type="radio" name="question22" value="option2"> Option 2
+                <input type="radio" name="question22" value="option2"> 김성원 리더 - 김민선 마을장
             </label><br>
             <label>
-                <input type="radio" name="question22" value="option3"> Option 3
+                <input type="radio" name="question22" value="option3"> 조은경(전 간사) - 김준영(전 리더)
             </label><br>
             <label>
-                <input type="radio" name="question22" value="option4"> Option 4
+                <input type="radio" name="question22" value="option4"> 조은경(전 간사) - 김민선 마을장
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>Question 2</h2>
+            <h2>좋아하는 음식 - 싫어하는 음식을 바르게 짝지은 것은?</h2>
             <label>
-                <input type="radio" name="question23" value="option1"> Option 1
+                <input type="radio" name="question23" value="option1"> 규카츠 - 라멘
             </label><br>
             <label>
-                <input type="radio" name="question23" value="option2"> Option 2
+                <input type="radio" name="question23" value="option2"> 불닭볶음면 - 규카츠
             </label><br>
             <label>
-                <input type="radio" name="question23" value="option3"> Option 3
+                <input type="radio" name="question23" value="option3"> 보드카 - 한식
             </label><br>
             <label>
-                <input type="radio" name="question23" value="option4"> Option 4
+                <input type="radio" name="question23" value="option4"> 규카츠 - 불닭볶음면
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>Question 3</h2>
+            <h2>가보지 않은 해외국가는?</h2>
             <label>
-                <input type="radio" name="question24" value="option1"> Option 1
+                <input type="radio" name="question24" value="option1"> 캐나다
             </label><br>
             <label>
-                <input type="radio" name="question24" value="option2"> Option 2
+                <input type="radio" name="question24" value="option2"> 인도
             </label><br>
             <label>
-                <input type="radio" name="question24" value="option3"> Option 3
+                <input type="radio" name="question24" value="option3"> 이탈리아
             </label><br>
             <label>
-                <input type="radio" name="question24" value="option4"> Option 4
+                <input type="radio" name="question24" value="option4"> 인도네시아
             </label>
         </div>
     </div>

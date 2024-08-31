@@ -62,11 +62,11 @@
                     // Determine if the selected option is correct (1) or incorrect (0)
                     let answerValue;
                     if (i === 37) {
-                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
-                    } else if (i === 38) {
-                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 2
-                    } else if (i === 39) {
                         answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 38) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 39) {
+                        answerValue = selectedOption.value === 'option2' ? 1 : 0; // Correct answer is option 4
                     }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 

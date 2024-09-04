@@ -16,14 +16,9 @@
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyBDj4ezKxJzZr2LacZhQbSy9oalLfuhCsY",
-            authDomain: "welcomelt.firebaseapp.com",
-            databaseURL: "https://welcomelt-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "welcomelt",
-            storageBucket: "welcomelt.appspot.com",
-            messagingSenderId: "444254240122",
-            appId: "1:444254240122:web:d9ebb4a7d87e8dad38eac3",
-            measurementId: "G-8E2Z7E8ZXT"
+            ////////////////////
+            //Your Credentials//
+            ////////////////////
         };
 
         // Initialize Firebase
@@ -54,19 +49,19 @@
             console.log("User is logged in as:", loggedInUserName);
 
             // Loop through each question to record the user's answer (0 or 1)
-            for (let i = 16; i <= 18; i++) { // Assuming there are 3 questions
+            for (let i = 1; i <= 3; i++) { // Assuming there are 3 questions
                 const selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
                 console.log(`Checking question ${i}...`);
 
                 if (selectedOption) {
                     // Determine if the selected option is correct (1) or incorrect (0)
                     let answerValue;
-                    if (i === 16) {
-                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
-                    } else if (i === 17) {
-                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 2
-                    } else if (i === 18) {
-                        answerValue = selectedOption.value === 'option4' ? 1 : 0; // Correct answer is option 4
+                    if (i === 1) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
+                    } else if (i === 2) {
+                        answerValue = selectedOption.value === 'option1' ? 1 : 0; // Correct answer is option 2
+                    } else if (i === 3) {
+                        answerValue = selectedOption.value === 'option3' ? 1 : 0; // Correct answer is option 4
                     }
                     console.log(`Question ${i} answered. Selected option: ${selectedOption.value}, Answer value: ${answerValue}`);
 
@@ -120,52 +115,52 @@
 
         <!-- Question 1 -->
         <div class="question-box">
-            <h2>Q1. 저는 교회를 다닌지 얼마나 되었을까요?</h2>
+            <h2>저의 키는 몇일까요?</h2>
             <label>
-                <input type="radio" name="question16" value="option1"> 1-3년
+                <input type="radio" name="question1" value="option1"> 183
             </label><br>
             <label>
-                <input type="radio" name="question16" value="option2"> 3-5년
+                <input type="radio" name="question1" value="option2"> 185
             </label><br>
             <label>
-                <input type="radio" name="question16" value="option3"> 5-10년
+                <input type="radio" name="question1" value="option3"> 187
             </label><br>
             <label>
-                <input type="radio" name="question16" value="option4"> 모태신앙
+                <input type="radio" name="question1" value="option4"> 189
             </label>
         </div>
 
         <!-- Question 2 -->
         <div class="question-box">
-            <h2>제가 2번째로 좋아하는 음악 장르는?</h2>
+            <h2>저의 취미가 아닌것은 무엇일까요?</h2>
             <label>
-                <input type="radio" name="question17" value="option1"> 힙합
+                <input type="radio" name="question2" value="option1"> 러닝
             </label><br>
             <label>
-                <input type="radio" name="question17" value="option2"> EDM
+                <input type="radio" name="question2" value="option2"> 식물 키우기
             </label><br>
             <label>
-                <input type="radio" name="question17" value="option3"> 재즈
+                <input type="radio" name="question2" value="option3"> 웨이트 트레이닝
             </label><br>
             <label>
-                <input type="radio" name="question17" value="option4"> CCM
+                <input type="radio" name="question2" value="option4"> 유튜브 보기
             </label>
         </div>
 
         <!-- Question 3 -->
         <div class="question-box">
-            <h2>저의 이상형인 연예인은 누구일까요?</h2>
+            <h2>형제자매는 어떻게 될까요?</h2>
             <label>
-                <input type="radio" name="question18" value="option1"> 에스파 카리나
+                <input type="radio" name="question3" value="option1"> 외동
             </label><br>
             <label>
-                <input type="radio" name="question18" value="option2"> 고윤정
+                <input type="radio" name="question3" value="option2"> 1남 1녀
             </label><br>
             <label>
-                <input type="radio" name="question18" value="option3"> 신예은
+                <input type="radio" name="question3" value="option3"> 2남 1녀
             </label><br>
             <label>
-                <input type="radio" name="question18" value="option4"> 소녀시대 윤아
+                <input type="radio" name="question3" value="option4"> 2녀 1남
             </label>
         </div>
     </div>
